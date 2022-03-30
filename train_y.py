@@ -11,7 +11,7 @@ import pandas as pd
 from training.gnn_y import train_gnn_y
 from uci.uci_subparser import add_uci_subparser
 from utils.utils import auto_select_gpu
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_types', type=str, default='EGSAGE_EGSAGE')

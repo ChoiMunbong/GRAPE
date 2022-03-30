@@ -27,6 +27,7 @@ from plot_utils import plot_result
 from baseline import baseline_inpute
 from sklearn.linear_model import LinearRegression
 from utils import construct_missing_X, get_impute_mae
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 def train(data, method):
     train_edge_mask = data.train_edge_mask.numpy()

@@ -10,7 +10,7 @@ import pandas as pd
 
 from training.baseline import baseline_mdi
 from uci.uci_data import load_data
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--domain', type=str, default='uci')

@@ -12,7 +12,7 @@ from training.gnn_mdi import train_gnn_mdi
 from uci.uci_data import load_data
 from utils.utils import auto_select_gpu
 
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--domain', type=str, default='uci')

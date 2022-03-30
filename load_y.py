@@ -7,6 +7,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import torch.nn.functional as F
 
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--domain', type=str, default='uci')
 parser.add_argument('--data', type=str, default='housing')

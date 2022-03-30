@@ -12,6 +12,7 @@ from training.gnn_mdi import train_gnn_mdi
 from mc.mc_subparser import add_mc_subparser
 from uci.uci_subparser import add_uci_subparser
 from training.baseline import baseline_mdi
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 def main():
     parser = argparse.ArgumentParser()

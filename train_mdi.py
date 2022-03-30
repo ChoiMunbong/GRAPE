@@ -13,6 +13,8 @@ from mc.mc_subparser import add_mc_subparser
 from uci.uci_subparser import add_uci_subparser
 from utils.utils import auto_select_gpu
 
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_types', type=str, default='EGSAGE_EGSAGE_EGSAGE')
@@ -73,6 +75,9 @@ def main():
     elif args.domain == 'mc':
         from mc.mc_data import load_data
         data = load_data(args)
+    # elif args.domain == 'korean_data' :
+    #     from
+
 
     log_path = './{}/test/{}/{}/'.format(args.domain,args.data,args.log_dir)
     os.makedirs(log_path)

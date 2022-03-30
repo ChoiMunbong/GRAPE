@@ -9,7 +9,7 @@ import torch
 import pandas as pd
 
 from training.linear_regression import linear_regression
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--domain', type=str, default='uci') # 'uci'

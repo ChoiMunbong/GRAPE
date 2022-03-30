@@ -5,12 +5,12 @@ import os
 import os.path as osp
 
 import numpy as np
-import torch
+import torchd
 import pandas as pd
 
 from mc.mc_subparser import add_mc_subparser
 from uci.uci_subparser import add_uci_subparser
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 parser = argparse.ArgumentParser()
 parser.add_argument('--seed', type=int, default=0)
 subparsers = parser.add_subparsers()
